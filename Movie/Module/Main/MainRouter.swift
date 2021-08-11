@@ -18,8 +18,8 @@ class MainRouter {
         return view
     }
    
-    func navigateToDetailView(from navigation: UIViewController, with data: Any) {
-        let detailVc = DetailRouter().showView()
+    func navigateToDetailView(from navigation: UIViewController, with data: Int) {
+        let detailVc = DetailRouter().showView(with: data)
         navigation.present(detailVc, animated: true)
     }
     

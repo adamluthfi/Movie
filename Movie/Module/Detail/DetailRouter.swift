@@ -9,10 +9,10 @@ import UIKit
 
 class DetailRouter {
     
-    func showView() -> DetailView {
+    func showView(with data: Int) -> DetailView {
         let view = DetailView(nibName: String(describing: DetailView.self), bundle: nil)
         let interactor = DetailInteractor()
-        let presenter = DetailPresenter(interactor: interactor)
+        let presenter = DetailPresenter(interactor: interactor, dataPassed: data)
         
         view.presenter = presenter
         return view

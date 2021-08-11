@@ -43,7 +43,7 @@ extension MainView {
                 self.tableView.deselectRow(at: indexPath, animated: true)
             }
             
-            MainRouter().navigateToDetailView(from: self, with: "")
+            MainRouter().navigateToDetailView(from: self, with: item.id)
         }.disposed(by: bag)
     }
 }

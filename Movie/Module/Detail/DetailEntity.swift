@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailEntity {
+struct DetailEntity: Decodable {
     
     let adult: Bool
     let backdropPath: String
@@ -53,7 +53,7 @@ struct DetailEntity {
     
 }
 
-struct BelongsToCollection: Codable {
+struct BelongsToCollection: Decodable {
     let id: Int
     let name, posterPath, backdropPath: String
 
@@ -64,12 +64,12 @@ struct BelongsToCollection: Codable {
     }
 }
 
-struct Genre: Codable {
+struct Genre: Decodable {
     let id: Int
     let name: String
 }
 
-struct ProductionCompany: Codable {
+struct ProductionCompany: Decodable {
     let id: Int
     let logoPath: String?
     let name, originCountry: String
@@ -82,7 +82,7 @@ struct ProductionCompany: Codable {
     }
 }
 
-struct ProductionCountry: Codable {
+struct ProductionCountry: Decodable {
     let iso3166_1, name: String
 
     enum CodingKeys: String, CodingKey {
@@ -91,7 +91,7 @@ struct ProductionCountry: Codable {
     }
 }
 
-struct SpokenLanguage: Codable {
+struct SpokenLanguage: Decodable {
     let englishName, iso639_1, name: String
 
     enum CodingKeys: String, CodingKey {
@@ -101,12 +101,12 @@ struct SpokenLanguage: Codable {
     }
 }
 
-struct Videos: Codable {
+struct Videos: Decodable {
     let results: [videoResult]
 }
 
 // MARK: - Result
-struct videoResult: Codable {
+struct videoResult: Decodable {
     let iso639_1, iso3166_1, name, key: String
     let publishedAt, site: String
     let size: Int
