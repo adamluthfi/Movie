@@ -6,6 +6,11 @@ target 'Movie' do
   use_frameworks!
 
   # Pods for Movie
+  pod 'RxAlamofire', '6.1.1'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  pod 'RxGesture', '4.0.2'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'MovieTests' do
     inherit! :search_paths
